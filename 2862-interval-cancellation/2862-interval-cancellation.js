@@ -6,9 +6,9 @@
  */
 var cancellable = function(fn, args, t) {
     fn(...args);
-    const setTime = setInterval(()=>fn(...args),t);
-    const cancelFn = () => clearInterval(setTime); 
-    return cancelFn
+    const timer = setInterval(()=>fn(...args),t);
+    const result = () => clearInterval(timer);
+    return result
 };
 
 /**
