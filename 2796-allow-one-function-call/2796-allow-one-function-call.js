@@ -3,11 +3,11 @@
  * @return {Function}
  */
 var once = function(fn) {
-    var check = false 
+    var check = false ;
     return function(...args){
         if(!check){
-            check = true
-            return fn(...args)
+            check = true;
+            return fn(...args);
         }
     }
 };
